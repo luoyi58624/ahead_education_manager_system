@@ -7,6 +7,8 @@ import com.ly666.project.global.defaultValue.GlobalStatus;
 import com.ly666.project.model.JsonResponse;
 import com.ly666.project.service.IAdminService;
 import com.ly666.project.util.SecurityUtil;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("/admin")
+@Api(value = "adminController",tags = {"admin操作接口"})
 public class AdminController {
 
 	private final IAdminService adminService;
@@ -33,6 +36,7 @@ public class AdminController {
 		this.adminService = adminService;
 	}
 
+	@ApiOperation(value = "admin登入",notes = "注意点",httpMethod = "POST")
 	@PostMapping("/login")
 	public JsonResponse userLogin(String email, String password) {
 		log.info(email + "请求登入");
@@ -50,7 +54,8 @@ public class AdminController {
 		}
 	}
 
-	@GetMapping("/checkAdminInfo")
+	@ApiOperation(value = "判断管理员是否存在",notes = "注意点",httpMethod = "POST")
+	@GetMapping("/isExistAdmin")
 	public Boolean exisitAdmin() {
 		return adminService.count() != 0;
 	}
