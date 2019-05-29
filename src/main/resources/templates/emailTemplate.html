@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head>	<meta charset="UTF-8">	<title>邮件模板</title></head><body><p>请在5分钟内点击链接进行账户激活，它的作用可以用于找回您的用户密码，同时也是您的账户唯一凭证</p><a href="#" th:href="@{http://localhost/blogServer/email/activeEmail/{key}(key=${key})}">立即激活</a></body></html>

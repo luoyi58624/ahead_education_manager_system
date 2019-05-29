@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly666.project.mapper.AdminMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ly666.project.entity.Admin">
+        <id column="admin_id" property="adminId" />
+        <result column="role_id" property="roleId" />
+        <result column="admin_name" property="adminName" />
+        <result column="admin_sex" property="adminSex" />
+        <result column="admin_age" property="adminAge" />
+        <result column="admin_native_place" property="adminNativePlace" />
+        <result column="admin_idcard" property="adminIdcard" />
+        <result column="admin_brithday" property="adminBrithday" />
+        <result column="admin_office_phone" property="adminOfficePhone" />
+        <result column="admin_mobile_phone" property="adminMobilePhone" />
+        <result column="admin_eamil" property="adminEamil" />
+        <result column="admin_addr" property="adminAddr" />
+        <result column="admin_qq" property="adminQq" />
+        <result column="admin_entry_time" property="adminEntryTime" />
+        <result column="admin_eduction_level" property="adminEductionLevel" />
+        <result column="admin_remark" property="adminRemark" />
+        <result column="admin_state" property="adminState" />
+        <result column="admin_password" property="adminPassword" />
+    </resultMap>
+
+</mapper>
