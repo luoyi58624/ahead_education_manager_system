@@ -141,7 +141,7 @@ INSERT INTO `anthorty_info` VALUES (26, 1, '学生管理', '', '');
 INSERT INTO `anthorty_info` VALUES (32, 1, '教务管理', '', '');
 INSERT INTO `anthorty_info` VALUES (54, 26, '班主任评价', 'communicateinfo/list.do', 'communicateinfo/list.do');
 INSERT INTO `anthorty_info` VALUES (55, 26, '期末成绩', 'studentwritegrade/list.do', 'studentwritegrade/list.do');
-INSERT INTO `anthorty_info` VALUES (56, 26, '周测成绩(未实现)', 'view/student/studentwritegrade1/studentwritegrade_list1.jsp', 'view/student/studentwritegrade1/studentwritegrade_list1.jsp');
+INSERT INTO `anthorty_info` VALUES (56, 26, '周测成绩(未实现)', 'view/StudentRealm/studentwritegrade1/studentwritegrade_list1.jsp', 'view/StudentRealm/studentwritegrade1/studentwritegrade_list1.jsp');
 INSERT INTO `anthorty_info` VALUES (57, 26, '考勤管理', 'attendanceinfo/list.do', 'attendanceinfo/list.do');
 INSERT INTO `anthorty_info` VALUES (59, 32, '课程管理', 'disciplineinfo/list.do', 'disciplineinfo/list.do');
 INSERT INTO `anthorty_info` VALUES (60, 32, '教室管理', 'classroominfo/list.do', 'classroominfo/list.do');
@@ -161,7 +161,7 @@ INSERT INTO `anthorty_info` VALUES (78, 76, '教师信息分析与统计', 'view
 INSERT INTO `anthorty_info` VALUES (79, 9, '通知管理', 'noticeinfo/list.do', 'noticeinfo/list.do');
 INSERT INTO `anthorty_info` VALUES (80, 26, '社会实践及技能培训', 'studentpracticeinfo/list.do', 'studentpracticeinfo/list.do');
 INSERT INTO `anthorty_info` VALUES (81, 26, '毕业论文及科研训练', 'studentgraduationinfo/list.do', 'studentgraduationinfo/list.do');
-INSERT INTO `anthorty_info` VALUES (82, 26, '学生信息', 'student/list.do', 'student/list.do');
+INSERT INTO `anthorty_info` VALUES (82, 26, '学生信息', 'StudentRealm/list.do', 'StudentRealm/list.do');
 INSERT INTO `anthorty_info` VALUES (84, 1, '文件上传', '', '');
 INSERT INTO `anthorty_info` VALUES (85, 84, '文件上传', 'uploadfile/list.do', 'uploadfile/list.do');
 INSERT INTO `anthorty_info` VALUES (86, 32, '学生评教(学期)', '', 'evaluationinfo/list.do');

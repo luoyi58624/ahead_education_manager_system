@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ly666.project.mapper.DataDictionaryMapper">
+<mapper namespace="com.ly666.ahead.mapper.DataDictionaryMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.ly666.project.entity.DataDictionary">
+    <resultMap id="BaseResultMap" type="com.ly666.ahead.entity.DataDictionary">
         <id column="data_id" property="dataId" />
         <result column="data_content" property="dataContent" />
         <result column="data_type" property="dataType" />

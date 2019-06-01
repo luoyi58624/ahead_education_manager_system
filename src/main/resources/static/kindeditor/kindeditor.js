@@ -1919,7 +1919,7 @@ function _getStartEnd(rng, isStart) {
 	var parent = pointRange.parentElement(),
 		nodes = parent.childNodes;
 	if (nodes.length === 0) {
-		return {node: parent.parentNode, offset: K(parent).index()};
+		return {node: parent.parentNode, offset: K(parent).home()};
 	}
 	var startNode = doc, startPos = 0, cmp = -1;
 	var testRange = rng.duplicate();
@@ -1957,7 +1957,7 @@ function _getStartEnd(rng, isStart) {
 		}
 	}
 	if (cmp < 0 && startNode.nodeType == 1) {
-		return {node: parent, offset: K(parent.lastChild).index() + 1};
+		return {node: parent, offset: K(parent.lastChild).home() + 1};
 	}
 	if (cmp > 0) {
 		while (startNode.nextSibling && startNode.nodeType == 1) {
@@ -2121,16 +2121,16 @@ _extend(KRange, {
 		return _updateCollapsed(this);
 	},
 	setStartBefore : function(node) {
-		return this.setStart(node.parentNode || this.doc, K(node).index());
+		return this.setStart(node.parentNode || this.doc, K(node).home());
 	},
 	setStartAfter : function(node) {
-		return this.setStart(node.parentNode || this.doc, K(node).index() + 1);
+		return this.setStart(node.parentNode || this.doc, K(node).home() + 1);
 	},
 	setEndBefore : function(node) {
-		return this.setEnd(node.parentNode || this.doc, K(node).index());
+		return this.setEnd(node.parentNode || this.doc, K(node).home());
 	},
 	setEndAfter : function(node) {
-		return this.setEnd(node.parentNode || this.doc, K(node).index() + 1);
+		return this.setEnd(node.parentNode || this.doc, K(node).home() + 1);
 	},
 	selectNode : function(node) {
 		return this.setStartBefore(node).setEndAfter(node);
@@ -2190,14 +2190,14 @@ _extend(KRange, {
 				nodeC = nodeC.parentNode;
 			}
 			if (nodeC) {
-				return K(nodeC).index() >= posA ? -1 : 1;
+				return K(nodeC).home() >= posA ? -1 : 1;
 			}
 			nodeC = nodeA;
 			while (nodeC && nodeC.parentNode !== nodeB) {
 				nodeC = nodeC.parentNode;
 			}
 			if (nodeC) {
-				return K(nodeC).index() >= posB ? 1 : -1;
+				return K(nodeC).home() >= posB ? 1 : -1;
 			}
 			nodeC = K(nodeB).next();
 			if (nodeC && nodeC.contains(nodeA)) {

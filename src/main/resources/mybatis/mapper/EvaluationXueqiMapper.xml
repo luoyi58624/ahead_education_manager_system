@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ly666.project.mapper.EvaluationXueqiMapper">
+<mapper namespace="com.ly666.ahead.mapper.EvaluationXueqiMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.ly666.project.entity.EvaluationXueqi">
+    <resultMap id="BaseResultMap" type="com.ly666.ahead.entity.EvaluationXueqi">
         <id column="evaluation_id" property="evaluationId" />
         <result column="student_id" property="studentId" />
         <result column="discipline_id" property="disciplineId" />

@@ -1,0 +1,1 @@
+package com.ly666.ahead.global.exception;import lombok.extern.slf4j.Slf4j;import org.springframework.web.bind.annotation.RestControllerAdvice;/** * @author ：luoyi * @date ：Created in 2019/5/23 14:54 * @desc : {全局异常处理} */@RestControllerAdvice@Slf4jpublic class GlobalException {}
