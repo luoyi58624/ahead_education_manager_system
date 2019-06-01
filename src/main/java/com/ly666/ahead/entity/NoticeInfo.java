@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -37,6 +38,7 @@ public class NoticeInfo implements Serializable {
     @TableField("notice_content")
     private String noticeContent;
 
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @TableField("notice_time")
     private LocalDateTime noticeTime;
 
