@@ -11,5 +11,8 @@
         <result column="notice_time" property="noticeTime" />
         <result column="notice_filename" property="noticeFilename" />
     </resultMap>
+	<select id="getNoticeInfos" resultType="com.ly666.ahead.entity.NoticeInfo">
+		select * from notice_info
+	</select>
 
 </mapper>
