@@ -10,4 +10,5 @@
         <result column="role_state" property="roleState" />
     </resultMap>
 
+	
 </mapper>

@@ -1,7 +1,7 @@
 package com.ly666.ahead.mapper;
 
-import com.ly666.ahead.entity.Admin;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.ly666.ahead.entity.Admin;
 import org.springframework.stereotype.Repository;
 
 /**
