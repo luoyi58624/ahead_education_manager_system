@@ -1,0 +1,1 @@
+package com.ly666.ahead.controller.admin;/** * @author ：luoyi * @date ：Created in 2019/6/5 8:38 * @desc : {} */public class MenuController {}
