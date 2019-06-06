@@ -1,7 +1,9 @@
 package com.ly666.ahead.mapper;
 
-import com.ly666.ahead.entity.RoleInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.ly666.ahead.entity.RoleInfo;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,5 +16,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface RoleInfoMapper extends BaseMapper<RoleInfo> {
-
+	@Select("select * from role_info ri,admin a where ri.role_id=a.role_id and a.account=#{account}")
+	RoleInfo roleInfos(@Param("account") String account);
 }

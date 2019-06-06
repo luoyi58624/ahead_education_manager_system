@@ -11,5 +11,22 @@
         <result column="anthorty_url" property="anthortyUrl" />
     </resultMap>
 
-
+	<select id="getMenus" resultType="com.ly666.ahead.entity.AnthortyInfo">
+		select *
+		from admin a,
+		     anthorty_info ai,
+		     role_anthority_info rai
+		where a.role_id = rai.role_id
+		  and ai.anthorty_id = rai.anthorty_id
+		  and a.admin_eamil = #{account}
+	</select>
+	<select id="getAuth" resultType="java.lang.String">
+		select ai.anthorty_name
+		from admin a,
+		     anthorty_info ai,
+		     role_anthority_info rai
+		where a.role_id = rai.role_id
+		  and ai.anthorty_id = rai.anthorty_id
+		  and a.admin_eamil = #{account}
+	</select>
 </mapper>
